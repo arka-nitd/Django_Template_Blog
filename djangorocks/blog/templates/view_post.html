@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+{% block head_title %}{{ post.title }}{% endblock %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block content %}
+ <div align="right">
+                <h2> <a href="/">Go to main page</a> </h2>
+        </div>
+
+<div id="post_body">
+<!--- if we add | safe next to post.body we will not be escaping html code in posts ----> 
+   {{ post.body | safe }}
+</div>
+
+<hr>
+{% for comment in post.comments.all %}
+    <div class="comment">
+        <strong>{{ comment.author }}</strong>
+        <p>{{ comment.text|linebreaks }}</p>
+    </div>
+{% empty %}
+    <p>No comments here yet :(</p>
+{% endfor %} 
+<div align="right">
+	<h2> <a href="/email">Have a complain? Send us an email!</a> </h2>
+</div>
+
+{% endblock %}
+

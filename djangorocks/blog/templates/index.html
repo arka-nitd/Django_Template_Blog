@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+
+{% block title %}Welcome to my blog{% endblock %}
+
+{% block content %}
+<div id="main" align="center">    
+	<div id="cat">
+	<h1>Categories</h1>
+    	{% if categories %}
+        <!---<div id="cat"> --->
+	
+        {% for category in categories %}
+          <h2>  <a href="{{ category.get_absolute_url }}">{{ category.title }}</a>
+		</h2>
+		<br/>
+        {% endfor %}
+        
+	</div>
+    {% else %}
+        <p>There are no categories.</p>
+    {% endif %}
+	<div id="posts">
+       <h1>Posts</h1>
+   	<!----<div id="posts"> --->
+
+	 {% if posts %}
+        
+
+        {% for post in posts %}
+         <h2>   <a href="{{ post.get_absolute_url }}">{{ post.title }}</a> </h2>
+	<!--- removed | safe so as to  escape html code on blog posts --->   
+	<p> {{ post.body|truncatewords:"50" }} </p>
+	<a href="{{ post.get_absolute_url }}"> Read More... </a>	
+	   <p>{{ post.text|linebreaksbr }}</p>
+        {% endfor %}
+        
+	</div>
+    {% else %}
+        <p>There are no posts.</p>
+    {% endif %}
+</div>
+<div align="left">
+ <h2>  <a href="/admin">Log in</a> or <a href="/register"> register </a>
+                </h2>
+<h2> <a href="/update"> Change your password </a> </h2>
+<h2> <a href="/email"> Don't have an account? Send us an email! </a> </h2>
+
+{% endblock %}
+

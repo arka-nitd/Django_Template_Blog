@@ -1,0 +1,87 @@
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+
+h1 {
+	text-shadow: 1px 1px 1px #000, 3px 3px 5px #bdadad;
+	text-align: center;
+	color: #bdadad;
+}
+
+
+body {
+	background-color: grey;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+#main{
+   align: center;
+   /*text-align: center;*/
+   width: 800px;
+   margin:0 auto;
+   border: 40px solid #F6F7F8;
+   background-color: #F6F7F8;
+   transition: all 0.3s linear;
+}
+#main:hover {
+	box-shadow: 0 0 0 5px #F6F7F8;
+}
+
+#cat {
+
+text-align: center;
+   margin-top: 0px;
+   margin-left: 20px;
+   margin-right: 20px;
+   border: 70px solid #F6F7F8;
+   background-color: #F6F7F8;
+   transition: all 0.3s linear;
+}
+
+#posts {
+text-align: center;
+   margin-top: 0px;
+   margin-left: 20px;
+   margin-right: 20px;
+   border: 90px solid #F6F7F8;
+   background-color: #F6F7F8;
+   transition: all 0.3s linear;
+}
+
+#post_body {
+text-align: center;
+   border: 90px solid #F6F7F8;
+   width: 800px;
+   margin:0 auto;
+   background-color: #F6F7F8;
+   transition: all 0.3s linear;
+}
+#post_body:hover {
+box-shadow: 0 0 0 5px #F6F7F8;
+}
+
+h2 {
+	text-shadow: 1px 1px 1px #000, 3px 3px 5px #f9d5d5;
+	color: #bdadad;
+}
+
+a:link {
+
+	color: pink;
+	font-family: 'Snell Roundhand', cursive;
+	text-decoration: none;
+}
+
+a:hover {
+ background-color: #bdadad;
+}
+
+a:visited {
+
+	color:purple;
+}
+
+.comment {
+    margin: 20px 0px 20px 20px;
+}
+
