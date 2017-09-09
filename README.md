@@ -24,7 +24,7 @@ source .virtualenv/bin/activate
 Now that we are inside the virtualenv it is time to install our needed python modules.
 
 ```pip install Django
-pip install ldap
+pip install python-ldap
 pip install django-auth-ldap```
 
 If you get an error while installing django-auth-ldap, like the " Modules/LDAPObject.c:18:18: fatal error: sasl.h: No such file or directory" I got, it could be solved by installing some dev packages to your main system.
