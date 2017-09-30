@@ -1,4 +1,4 @@
-=== Contributing to this project ===
+# Contributing to this project
 
 Well, this project is not much, just a tutorial for Django + OpenLdap, that has yet to be shaped like and actual tutorial.
 So I need your helo with that :) 
