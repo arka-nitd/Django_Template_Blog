@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'djangorocks.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-	'NAME': '/srv/djangorocks/db.sqlite3',
+	'NAME': 'djangorocks/db.sqlite3',
     }
 }
 
